@@ -71,7 +71,7 @@ TweenMax.from('.name', 2, {
 // pointer js init
 // intial pointer js
 init_pointer({
-  pointerColor: "red", // Css color
+  pointerColor: "#e0dde0", // Css color
 ringSize: 15, // Pixels
 ringClickSize: 10 // Pixels when clicking
       })
