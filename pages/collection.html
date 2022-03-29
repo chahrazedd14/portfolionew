@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Font CDN -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet"> 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Aos animation CSS cdn -->
@@ -16,6 +18,21 @@
     <title>Collection</title>
 </head>
 <body >
+  <!-- cursor Start -->
+  <div class="cursor">
+    <div class="cursor__ball cursor__ball--big ">
+      <svg height="30" width="30">
+        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+      </svg>
+    </div>
+    
+    <div class="cursor__ball cursor__ball--small">
+      <svg height="10" width="10">
+        <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+      </svg>
+    </div>
+  </div>
+  <!-- cursor End -->
     <!-- transition Start -->
     <div class="loader loader--active">
         <div class="loader__icon"><svg id="loader-1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
@@ -31,8 +48,9 @@
     </div>
     <!-- transition Ends -->
     <!-- nav Start -->
+  <div class="wrapper">
     <nav class="nav colection_nav">
-        <ul>
+        <ul class="hoverable">
           <li class="logo">
             <div class="text-rotate">
               <span>c</span>
@@ -74,163 +92,26 @@
       <li class="pagination__item"><a class="pagination__button"></a></li>
       <li class="pagination__item"><a class="pagination__button"></a></li>
       <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
     </ul>
   </main>
   <footer class="footer">
   </footer>
 </div>
+</div>
 <!-- Slide End -->
-<!-- Pointer JS -->
-<script src="../js/pointer.js"></script>
-<script>
-  // intial pointer js
-init_pointer({
-  pointerColor: "#e0dde0", // Css color
-ringSize: 15, // Pixels
-ringClickSize: 10 // Pixels when clicking
-      })
-</script>
 
-// Slide CDN
+<!-- Slide CDN -->
 <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
 <script src="https://rawgit.com/lmgonzalves/momentum-slider/master/dist/momentum-slider.min.js"></script>
-
-<script>
-    // Slide Start
-    window.console = window.console || function (t) {};
-
-    if (document.location.search.match(/type=embed/gi)) {
-      window.parent.postMessage("resize", "*");
-    }
-    
-    (function () {
-    var slidersContainer = document.querySelector(".sliders-container");
-
-    // Initializing the numbers slider
-    var msNumbers = new MomentumSlider({
-      el: slidersContainer,
-      cssClass: "ms--numbers",
-      range: [1, 5],
-      rangeContent: function (i) {
-        return "0" + i;
-      },
-      style: {
-        transform: [{ scale: [0.4, 1] }],
-        opacity: [0, 1]
-      },
-      interactive: false
-    });
-
-    // Initializing the titles slider
-    var titles = [
-      "King of the Ring Fight",
-      "Sound of Streets",
-      "Urban Fashion",
-      "Windy Sunset",
-      "new slide"
-    ];
-    var msTitles = new MomentumSlider({
-      el: slidersContainer,
-      cssClass: "ms--titles",
-      range: [0, 4],
-      rangeContent: function (i) {
-        return "<h3>" + titles[i] + "</h3>";
-      },
-      vertical: true,
-      reverse: true,
-      style: {
-        opacity: [0, 1]
-      },
-      interactive: false
-    });
-
-    // Initializing the links slider
-    var msLinks = new MomentumSlider({
-      el: slidersContainer,
-      cssClass: "ms--links",
-      range: [0, 4],
-      rangeContent: function () {
-        return '<a class="ms-slide__link">View Case</a>';
-      },
-      vertical: true,
-      interactive: false
-    });
-
-    // Get pagination items
-    var pagination = document.querySelector(".pagination");
-    var paginationItems = [].slice.call(pagination.children);
-
-    // Initializing the images slider
-    var msImages = new MomentumSlider({
-      // Element to append the slider
-      el: slidersContainer,
-      // CSS class to reference the slider
-      cssClass: "ms--images",
-      // Generate the 4 slides required
-      range: [0, 4],
-      rangeContent: function () {
-        return '<div class="ms-slide__image-container"><div class="ms-slide__image"></div></div>';
-      },
-      // Syncronize the other sliders
-      sync: [msNumbers, msTitles, msLinks],
-      // Styles to interpolate as we move the slider
-      style: {
-        ".ms-slide__image": {
-          transform: [{ scale: [1.5, 1] }]
-        }
-      },
-      // Update pagination if slider change
-      change: function (newIndex, oldIndex) {
-        if (typeof oldIndex !== "undefined") {
-          paginationItems[oldIndex].classList.remove(
-            "pagination__item--active"
-          );
-        }
-        paginationItems[newIndex].classList.add("pagination__item--active");
-      }
-    });
-
-    // Select corresponding slider item when a pagination button is clicked
-    pagination.addEventListener("click", function (e) {
-      if (e.target.matches(".pagination__button")) {
-        var index = paginationItems.indexOf(e.target.parentNode);
-        msImages.select(index);
-      }
-    });
-  })();
-
-// Slide Ends
-</script>
-
-<!-- Aos Animation Js CDN -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
-<script>
-
-// AOS Animation Initialize
-    AOS.init();
-
-// page transition Start
-
-var $loader = document.querySelector(".loader");
-    
-window.onload = function () {
-  $loader.classList.remove("loader--active");
-};
-
-document.querySelector(".btn").addEventListener("click", function () {
-  $loader.classList.add("loader--active");
-
-  window.setTimeout(function () {
-    $loader.classList.remove("loader--active");
-  }, 5000);
-});
-
-// page transition End
-
-</script>
-
+<!-- Tween Max Js Cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<!-- Collection Js -->
+<script src="../js/collection.js"></script>
 <!-- My Js -->
 <script src="../index.js"></script>
 </body>

@@ -66,13 +66,56 @@ TweenMax.from('.name', 2, {
   x: -600,
   ease: Circ.easeInOut
 })
+// contact area animation
+TweenMax.to('.mainContainer', 2, {
+  delay: 1.5,
+  width: '800px',
+  ease: Power2.easeInOut
+})
+TweenMax.from('.mainContainer > .content', 2, {
+  delay: 1.5,
+  opacity: 0,
+  ease: Power2.easeInOut
+})
+TweenMax.from('.mainContainer > .menu', 2, {
+  delay: 1.5,
+  opacity: 0,
+  ease: Power2.easeInOut
+})
 /* Tween Max End */ 
 
-// pointer js init
-// intial pointer js
-init_pointer({
-  pointerColor: "#e0dde0", // Css color
-ringSize: 15, // Pixels
-ringClickSize: 10 // Pixels when clicking
-      })
+// Custom Cursor js
+const $bigBall = document.querySelector(".cursor__ball--big");
+const $smallBall = document.querySelector(".cursor__ball--small");
+const $hoverables = document.querySelectorAll(".hoverable");
 
+// Listeners
+document.body.addEventListener("mousemove", onMouseMove);
+for (let i = 0; i < $hoverables.length; i++) {
+  $hoverables[i].addEventListener("mouseenter", onMouseHover);
+  $hoverables[i].addEventListener("mouseleave", onMouseHoverOut);
+}
+
+// Move the cursor
+function onMouseMove(e) {
+  TweenMax.to($bigBall, 0.4, {
+    x: e.pageX - 15,
+    y: e.pageY - 15
+  });
+  TweenMax.to($smallBall, 0.1, {
+    x: e.pageX - 5,
+    y: e.pageY - 7
+  });
+}
+
+// Hover an element
+function onMouseHover() {
+  TweenMax.to($bigBall, 0.3, {
+    scale: 4
+  });
+}
+function onMouseHoverOut() {
+  TweenMax.to($bigBall, 0.3, {
+    scale: 1
+  });
+}
