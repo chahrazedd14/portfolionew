@@ -9,34 +9,18 @@
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!-- Pointer CSS -->
-  <link rel="stylesheet" href="../css/pointer.css">
+  <link rel="stylesheet" href="./css/pointer.css">
   <!-- My CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Portfolio Chahrazed Durand</title>
 </head>
-
 <body>
-  <!-- cursor Start -->
-  <div class="cursor">
-    <div class="cursor__ball cursor__ball--big ">
-      <svg height="30" width="30">
-        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
-      </svg>
-    </div>
-    
-    <div class="cursor__ball cursor__ball--small">
-      <svg height="10" width="10">
-        <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
-      </svg>
-    </div>
-  </div>
-  <!-- cursor End -->
   <div class="wrapper">
     <div class="left"></div>
     <div class="right"></div>
 
     <nav class="nav">
-      <ul class="hoverable">
+      <ul>
         <li class="logo">
           <div class="text-rotate">
             <span>c</span>
@@ -54,19 +38,25 @@
         </li>
         <li class="menu"><i class="fa fa-bars"></i></li>
         <li class="collection">
-          <a href="./collection.html">collection</a>
+          <div class="content">
+            <a href="./pages/collection.html" class="link">Collection</a>
+          </div>
         </li>
-        <li class="explore">
-          <a href="./explore.html">explore</a>
-        </li>
+        <li class="explore">explore</li>
         <li class="search">search</li>
         <li class="profile">
           <div class="img"></div>
         </li>
       </ul>
     </nav>
+
+    <div class="content">
+      <div class="img-wrapper">
+        <div class="karina"></div>
+      </div>
+
       <div class="info">
-        <ul class="hoverable">
+        <ul>
           <li>chahrazed-durand.com</li>
           <li>@chahrazedd14</li>
           <li>Chahrazed Durand</li>
@@ -91,29 +81,32 @@
       </div>
 
       <div class="text">
-        <h1>Profile</h1>
+        <h1>Chahrazed D</h1>
+        <p>Design & Developpeur web et mobile</p>
       </div>
-      <div class="bottomnav">
-        <ul class="hoverable">
+
+      <div class="name">Chahrazed D</div>
+
+      <div class="bottomnav" >
+        <ul >
+          <li>
+            <a href="pages/profile.html">profile </a>
+          </li>
           <li class="active">
-            <a href="profile.html">profile </a>
+            <a href="index.html">portfolio </a>
           </li>
           <li>
-            <a href="../index.html">portfolio </a>
-          </li>
-          <li>
-            <a href="contact.html">contact </a>
+            <a href="pages/contact.html">contact </a>
           </li>
         </ul>
       </div>
     </div>
   </div>
- <!-- gsap -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
-<!-- Tween Max Js -->
+<!-- Tween Max Js Cdn -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<!-- Pointer JS -->
+<script src="./js/pointer.js"></script>
 <!-- My Js -->
-  <script src="../js/index.js"></script>
+  <script src="index.js"></script>
 </body>
-
 </html>
