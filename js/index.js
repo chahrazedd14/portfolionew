@@ -45,7 +45,7 @@ TweenMax.from('.text p', 2, {
 
 TweenMax.to('.karina', 2, {
   delay: 1.5,
-  width: '800px',
+  width: '880px',
   ease: Power2.easeInOut
 })
 
@@ -69,7 +69,7 @@ TweenMax.from('.name', 2, {
 // contact area animation
 TweenMax.to('.mainContainer', 2, {
   delay: 1.5,
-  width: '800px',
+  width: '880px',
   ease: Power2.easeInOut
 })
 TweenMax.from('.mainContainer > .content', 2, {
@@ -119,3 +119,15 @@ function onMouseHoverOut() {
     scale: 1
   });
 }
+
+
+console.clear();
+
+const elApp = document.querySelector('#app');
+const elStateNav = document.querySelectorAll('[data-to]');
+
+Array.from(elStateNav).forEach(el => {
+  el.addEventListener('click', () => {
+    elApp.dataset.state = el.dataset.to;
+  });
+});

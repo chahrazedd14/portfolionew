@@ -277,19 +277,19 @@ nav.colection_nav {
 /* Share button Start */
 .my_share{
   position: relative;
+  top: 10px;
 }
 /* Share Button Wrapper */
 .share-button {
   position: relative;
   width: 50px;
-  margin-top: 10px;
 }
 
 /* Toggle Button */
 .toggle {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 33px;
+  height: 33px;
   z-index: 10;
   display: block;
   border-radius: 25px;
@@ -309,14 +309,15 @@ nav.colection_nav {
 .toggle:after {
   position: relative;
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 19px;
+  height: 19px;
   font-family: "FontAwesome";
   content: "\f1e0";
   line-height: 50px;
-  font-size: 26px;
+  font-size: 19px;
   text-align: center;
-  left: -2px; /* To align the icon optically */
+  left: 5px;
+  top: -8px;
 }
 
 /* Hidden input to toggle state */
@@ -338,10 +339,10 @@ Open Toggle Button
   background-color: #f4f3ed;
   content: "";
   height: 3px;
-  width: 30px;
+  width: 18px;
   position: absolute;
-  left: 10px;
-  top: 23px;
+  left: 7px;
+  top: 16px;
 }
 
 /* Bar 1 */
@@ -372,7 +373,7 @@ Network List
   width: 150px;
   margin: 0;
   padding: 0;
-  border-radius: 26px;
+  border-radius: 1px 5px;
   overflow: hidden;
   opacity: 0;
   backface-visibility: hidden;
@@ -641,7 +642,7 @@ Keyframe Animations
   bottom: 0;
   left: 180px;
 }
-.contact_area{
+.contact_area {
   background-color: #fff;
   height: 550px;
   width: 0;
@@ -661,45 +662,46 @@ Keyframe Animations
   box-shadow:0 0 10px #2323;
   display:flex;
 }
-.mainContainer > .menu{
-  width:75px;
-  color:#3e3e3e;
-  border-right:1px solid rgba(62, 62, 62,0.2);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding-top:50px;
+.mainContainer > .menu {
+  width: 63px;
+  color: #3e3e3e;
+  border-right: 1px solid rgba(62, 62, 62,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
 }
-.mainContainer > .menu > .quote{
-  width:400px;
-  height:70px;
-  color:rgba(62, 62, 62,0.3);
-  font-weight:bolder;
-  font-size:14px;
-  letter-spacing:5px;
-  transform:rotate(-90deg);
-  position:relative;
-  top:200px;
+.mainContainer > .menu > .quote {
+  width: 427px;
+  height: 8px;
+  color: rgba(62, 62, 62,0.3);
+  font-weight: bolder;
+  font-size: 7px;
+  letter-spacing: 5px;
+  transform: rotate(-90deg);
+  position: relative;
+  top: 200px;
   font-family: 'Raleway', sans-serif;
 }
-.mainContainer > .content{
-  width:350px;
+.mainContainer > .content {
+  width: 587px;
 }
-.mainContainer > .content > .header{
-  height:120px;
+.mainContainer > .content > .header {
+  
   font-family: 'Raleway', sans-serif;
-  font-weight:bolder;
-  font-size:36px;
-  letter-spacing:5px;
-  justify-content:flex-start;
-  padding-left:25px;
-  color:#bc002d;
-  margin-top:20px;
+  font-weight: bolder;
+  font-size: 24px;
+  letter-spacing: 5px;
+  justify-content: flex-start;
+  padding-left: 25px;
+  color: #800000;
+  margin-top: 48px;
   text-align: left;
 }
+
 .mainContainer > .content > .contact_info{
-  padding: 20px 24px;
-  height: 300px;
+  padding: 61px 24px;
+  height: 306px;
   font-size: 14px;
   font-weight: bolder;
   line-height: 1.7em;
@@ -708,21 +710,21 @@ Keyframe Animations
   text-align: left;
 }
 .jap{
-  height:30px;
+  
   padding-left:25px;
   font-weight:bolder;
   font-size:16px;
-  color:#bc002d;
+  color:#800000;
   font-family: 'Raleway', sans-serif;
   letter-spacing:2px;
   text-align: left;
 }
 .mainContainer > .content > .flag{
-  height:50px;
-  position:relative;
-  top: 20px;
-  display:flex;
-  align-items:center;
+  
+    position: relative;
+    top: -55px;
+    display: flex;
+    text-align: initial;
 }
 .mainContainer > .content > .flag > img{
   margin-left:25px;
@@ -733,15 +735,15 @@ Keyframe Animations
   margin-left:15px;
   font-weight:bolder;
   font-size:12px;
-  color:#bc002d;
+  color:#800000;
   letter-spacing:2px;
 }
-.imgHold{
-  height:600px;
-  width:550px;
-  background: url(https://images.pexels.com/photos/46253/mt-fuji-sea-of-clouds-sunrise-46253.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb) no-repeat;
-  background-size:cover;
-  background-position:right;
+.imgHold {
+  height: 600px;
+  width: 550px;
+  background: url(https://images.squarespace-cdn.com/content/v1/5b7f8367f2e6b191fbb627a7/1594227902821-23RG1UH745AC56PTN5SG/Untitled+design%282%29.png?format=1000w) no-repeat;
+  background-size: cover;
+  background-position: right;
 }
 .footer{
   width:70px;
@@ -749,6 +751,7 @@ Keyframe Animations
   justify-content:flex-end;
   color:rgba(62, 62, 62,0.2);
   padding-bottom:100px;
+  background:#e0dde0;
 }
 .footer > i{
   font-size:18px;
