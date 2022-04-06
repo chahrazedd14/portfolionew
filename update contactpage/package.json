@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "node": "^17.7.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

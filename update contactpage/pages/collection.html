@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Font CDN -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet"> 
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Aos animation CSS cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Slide CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
+    <!-- Pointer CSS -->
+    <link rel="stylesheet" href="../css/pointer.css">
+    <!-- Collection css -->
+    <link rel="stylesheet" href="../css/collection.css">
+    <!-- My css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Collection</title>
+</head>
+<body >
+  <!-- cursor Start -->
+  <div class="cursor">
+    <div class="cursor__ball cursor__ball--big ">
+      <svg height="30" width="30">
+        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+      </svg>
+    </div>
+    
+    <div class="cursor__ball cursor__ball--small">
+      <svg height="10" width="10">
+        <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+      </svg>
+    </div>
+  </div>
+  <!-- cursor End -->
+    <!-- transition Start -->
+    <div class="loader loader--active">
+        <div class="loader__icon"><svg id="loader-1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"></path>
+                <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0C22.32,8.481,24.301,9.057,26.013,10.047z"></path>
+                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite"></animateTransform>
+            </svg></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+    </div>
+    <!-- transition Ends -->
+    <!-- nav Start -->
+  <div class="wrapper">
+    <nav class="nav colection_nav">
+        <ul class="hoverable">
+          <li class="logo">
+            <div class="text-rotate">
+              <span>c</span>
+              <span>h</span>
+              <span>a</span>
+              <span>h</span>
+              <span>r</span>
+              <span>a</span>
+              <span>z</span>
+              <span>e</span>
+              <span>d</span>
+              <span>.</span>
+              <span>d</span>
+            </div>
+          </li>
+          <li class="menu"><i class="fa fa-bars"></i></li>
+          <li class="collection">
+            <a href="../index.html">Portfolio</a>
+          </li>
+          <li class="explore">
+            <a href="./explore.html">explore</a>
+          </li>
+          <li class="search">search</li>
+          <li class="profile">
+            <div class="img"></div>
+          </li>
+        </ul>
+      </nav>
+    <!-- nav Ends -->
+
+<!-- Slide Start -->
+<div class="container container_horizontal">
+  <!-- Container for all sliders, and pagination -->
+  <main class="sliders-container child">
+    <!-- Here will be injected sliders for images, numbers, titles and links -->
+
+    <!-- Simple pagination for the slider -->
+    <ul class="pagination">
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+      <li class="pagination__item"><a class="pagination__button"></a></li>
+    </ul>
+  </main>
+  <footer class="footer">
+  </footer>
+</div>
+</div>
+<!-- Slide End -->
+
+<!-- Slide CDN -->
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+<script src="https://rawgit.com/lmgonzalves/momentum-slider/master/dist/momentum-slider.min.js"></script>
+<!-- Tween Max Js Cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<!-- Collection Js -->
+<script src="../js/collection.js"></script>
+<!-- My Js -->
+<script src="../js/index.js"></script>
+</body>
+</html>
